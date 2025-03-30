@@ -25,7 +25,7 @@ button:hover {
 input, textarea {
   padding: 10px;
   margin: 5px;
-  width: 80%;
+  width: 50%;
 }
 
 .container {
@@ -36,4 +36,62 @@ input, textarea {
   background: white;
   box-shadow: 2px 2px 10px gray;
   border-radius: 5px;
+}
+/* Responsive Styling - Ensuring Proper Layout Across Devices */
+/* styles.css */
+.content-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+select {
+  width: 90%;
+  max-width: 400px;
+  display: block;
+  margin: 10px auto;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.start-button {
+  display: block;
+  margin: 20px auto 0;
+  padding: 12px 25px;
+  font-size: 18px;
+  width: 90%;
+  max-width: 400px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.start-button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"],
+  select,
+  .start-button {
+    width: 95%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .content-wrapper {
+    max-width: 700px;
+  }
 }
